@@ -5,8 +5,8 @@ export const profile = {
     "Bridging hardware, software and intelligent systems, from EEG-based shape recognition to disaster-rescue rovers.",
   location: "Pune, India",
   email: "your-email@example.com", // TODO: replace
-  github: "https://github.com/your-username", // TODO: replace
-  linkedin: "https://linkedin.com/in/your-username", // TODO: replace
+  github: "https://github.com/Aditya-0406", // TODO: replace
+  linkedin: "https://www.linkedin.com/in/aditya-awate-282867299/?isSelfProfile=true", // TODO: replace
   resumeUrl: "/Aditya_Awate_Resume.pdf", // put the PDF in /public
 };
 
