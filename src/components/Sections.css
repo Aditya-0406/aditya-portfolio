@@ -1,0 +1,257 @@
+.section__eyebrow {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.section__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 48px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* About */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about__text p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0 0 20px;
+}
+
+.about__facts {
+  display: grid;
+  gap: 20px;
+}
+
+.about__facts span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.about__facts strong {
+  font-weight: 600;
+}
+
+/* Skills */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.skills__grid h3 {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+}
+
+/* Projects */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.project__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.project__head h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.project__year {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.project__summary {
+  color: var(--muted);
+  margin: 12px 0 16px;
+}
+
+.project__highlights {
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+
+.project__highlights li {
+  margin-bottom: 6px;
+}
+
+.project__link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Experience */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 24px;
+}
+
+.timeline__head {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: baseline;
+}
+
+.timeline__head h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.timeline__period {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.timeline__org {
+  color: var(--accent);
+  font-weight: 500;
+  margin: 4px 0 12px;
+}
+
+.timeline__desc {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Certifications */
+.certs__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.cert h3 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+
+.cert p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Contact */
+.contact__card {
+  text-align: center;
+  padding: 56px 24px;
+}
+
+.contact__card p {
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 28px;
+}
+
+.contact__links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Staggered card entrance */
+.reveal.is-visible .skills__grid > *,
+.reveal.is-visible .projects__grid > *,
+.reveal.is-visible .certs__grid > *,
+.reveal.is-visible .timeline > * {
+  animation: rise 0.6s ease backwards;
+}
+
+.reveal.is-visible .skills__grid > *:nth-child(2),
+.reveal.is-visible .projects__grid > *:nth-child(2),
+.reveal.is-visible .certs__grid > *:nth-child(2),
+.reveal.is-visible .timeline > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.reveal.is-visible .skills__grid > *:nth-child(3),
+.reveal.is-visible .certs__grid > *:nth-child(3),
+.reveal.is-visible .timeline > *:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.reveal.is-visible .skills__grid > *:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.reveal.is-visible .skills__grid > *:nth-child(5) {
+  animation-delay: 0.4s;
+}
